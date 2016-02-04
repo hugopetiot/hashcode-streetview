@@ -6,12 +6,20 @@ public class Rue {
 	private Intersection arrive;
 	private int cout;
 	private int longueur;
+	private boolean visite;
+	public boolean isVisite() {
+		return visite;
+	}
+	public void setVisite(boolean visite) {
+		this.visite = visite;
+	}
 	public Rue(boolean ds,Intersection d,Intersection a,int c, int l){
 		doublesens=ds;
 		depart=d;
 		arrive=a;
 		cout=c;
 		longueur=l;
+		visite=false;
 	}
 	public boolean isDoublesens() {
 		return doublesens;
