@@ -8,13 +8,26 @@ import java.util.Scanner;
 
 public class Main {
 	static Scanner in = new Scanner(System.in);
-	static ArrayList<Intersection> blop= new ArrayList<Intersection>();
+	static ArrayList<Intersection> blop = new ArrayList<Intersection>();
 	
 	
 	public static void main(String args[]){
 		Locale.setDefault(Locale.ENGLISH);
 
 		Ville ville = loadData(new File("paris_54000.txt"));
+		
+		ArrayList<Intersection> inter = ville.getIntersections();
+		for (Rue r : inter.get(7283).getRues()){
+			System.out.println(r.getLongueur());
+		}
+		
+		BestRatio(ville.getIntersections().get(ville.getPosInitiale()),0,0,ville.getTempsAutorise());
+		/*
+		for(Intersection i : blop){
+			System.out.println(i.getRatio());
+		}
+		*/
+		
 		/*
 		Intersection depart=ville.getIntersections().get(0);
 		for(Voiture v: ville.getVoitures() ){
