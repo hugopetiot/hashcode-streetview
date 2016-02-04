@@ -2,6 +2,8 @@ package googlecars;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -9,6 +11,7 @@ public class Main {
 	
 	
 	public static void main(String args[]){
+		Locale.setDefault(Locale.ENGLISH);
 
 		Ville ville = loadData(new File("paris_54000.txt"));
 		Intersection depart=ville.getIntersections().get(0);
