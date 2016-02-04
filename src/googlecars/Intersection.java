@@ -5,35 +5,22 @@ import java.util.ArrayList;
 public class Intersection {
 	public ArrayList<Rue> rues;
 	private ArrayList<Intersection> precedent;
-<<<<<<< HEAD
 	private double ratio;
-	public ArrayList<Intersection> getPrecedent() {
-		return precedent;
-	}
-	public void setPrecedent(ArrayList<Intersection> precedent) {
-		this.precedent = precedent;
-	}
-
-=======
->>>>>>> origin/master
 	private double latitude;
 	private double longitude;
 	
 	public Intersection(double la,double lo){
 		latitude=la;
 		longitude=lo;
-<<<<<<< HEAD
 		ratio=0;
+		rues = new ArrayList<Rue>();
+		precedent = new ArrayList<Intersection>();
 	}
 	public double getRatio() {
 		return ratio;
 	}
 	public void setRatio(double ratio) {
 		this.ratio = ratio;
-=======
-		rues = new ArrayList<Rue>();
-		precedent = new ArrayList<Intersection>();
->>>>>>> origin/master
 	}
 	
 	public ArrayList<Rue> getRues() {

@@ -2,11 +2,8 @@ package googlecars;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-<<<<<<< HEAD
 import java.util.ArrayList;
-=======
 import java.util.Locale;
->>>>>>> origin/master
 import java.util.Scanner;
 
 public class Main {
