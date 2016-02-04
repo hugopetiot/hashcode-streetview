@@ -9,15 +9,15 @@ public class Main {
 	
 	
 	public static void main(String args[]){
-		Datacenter d= loadData(new File("dc.in.txt"));
+		Datacenter d = loadData(new File("paris_54000.txt"));
 		System.out.println(d.toString());
 		d.rangement1();
 		System.out.println(d.score());
 		d.etat();
 	}
 	
-	public static Datacenter loadData(File f){
-		Datacenter datac = null;		
+	public static Ville loadData(File f){
+		Ville ville = null;
 		int rangees, emplacements, emplacementsIndisponibles, groupes, serveurs;
 		int i;
 		try {
