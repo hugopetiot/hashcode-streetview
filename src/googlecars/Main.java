@@ -9,40 +9,29 @@ public class Main {
 	
 	
 	public static void main(String args[]){
-		Datacenter d = loadData(new File("paris_54000.txt"));
-		System.out.println(d.toString());
-		d.rangement1();
-		System.out.println(d.score());
-		d.etat();
+		Ville v = loadData(new File("paris_54000.txt"));
 	}
 	
 	public static Ville loadData(File f){
 		Ville ville = null;
-		int rangees, emplacements, emplacementsIndisponibles, groupes, serveurs;
-		int i;
 		try {
 			FileInputStream fis = new FileInputStream(f);
 			in = new Scanner(fis);
-			//2rangeesde5emplacements,1emplacementindisponible,2groupeset5serveurs.
-			rangees = in.nextInt();
-			emplacements= in.nextInt(); 
-			emplacementsIndisponibles= in.nextInt(); 
-			groupes= in.nextInt(); 
-			serveurs= in.nextInt();
-			System.out.println(rangees+"  "+emplacements);
-			datac = new Datacenter(rangees, emplacements, emplacementsIndisponibles, groupes, serveurs);
+			//32300020 //3intersections,2rues,3000s,2véhicules,partantde0.
+			int nbi, nbr, tpsa, nbv, posi;
+			nbi=in.nextInt();
+			nbr=in.nextInt();
+			tpsa=in.nextInt();
+			nbv=in.nextInt();
+			posi=in.nextInt();
 			
-			for(  i = 0 ; i<emplacementsIndisponibles; i++)
-				datac.ajoutIndisponible(in.nextInt(), in.nextInt());
+			ville =new Ville(nbi, nbr, tpsa, nbv, posi);
 			
-			for( i = 0 ; i<serveurs; i++)
-				datac.ajoutListeServeur(in.nextInt(), in.nextInt());
 			
-			datac.etat();
+
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return datac;
+		return ville;
 	}
 }
