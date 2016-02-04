@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Intersection {
 	private ArrayList<Rue> rues;
 	private ArrayList<Intersection> precedent;
+	private double ratio;
 	public ArrayList<Intersection> getPrecedent() {
 		return precedent;
 	}
@@ -17,6 +18,13 @@ public class Intersection {
 	public Intersection(double la,double lo){
 		latitude=la;
 		longitude=lo;
+		ratio=0;
+	}
+	public double getRatio() {
+		return ratio;
+	}
+	public void setRatio(double ratio) {
+		this.ratio = ratio;
 	}
 	public ArrayList<Rue> getRues() {
 		return rues;

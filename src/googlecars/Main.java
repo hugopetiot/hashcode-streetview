@@ -2,15 +2,18 @@ package googlecars;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 	static Scanner in = new Scanner(System.in);
+	static ArrayList<Intersection> blop= new ArrayList<Intersection>();
 	
 	
 	public static void main(String args[]){
 
 		Ville ville = loadData(new File("paris_54000.txt"));
+		/*
 		Intersection depart=ville.getIntersections().get(0);
 		for(Voiture v: ville.getVoitures() ){
 			Rue r=null;
@@ -28,7 +31,8 @@ public class Main {
 					v.setTrajet(v.getTrajet()+r.getLongueur());
 			}
 			v.getChemin().remove();
-		}
+		}*/
+		
 		System.out.println(ville.score());
 	}
 		
@@ -61,5 +65,28 @@ public class Main {
 			e.printStackTrace();
 		}
 		return ville;
+	}
+	
+	public static Intersection BestRatio(Intersection I,int TempsUtilise,int DistTot,int Tempsmax){
+	for (Rue r : I.getRues()){
+		Intersection destination;
+		if(I.equals(r.getArrive())){
+			destination=r.getDepart();
+		}
+		else{
+			destination=r.getArrive();
+		}
+			
+		if (destination.getRatio()<(DistTot+r.getLongueur())/(TempsUtilise+r.getCout())){
+			if (TempsUtilise+r.getCout()<Tempsmax){
+				destination.setRatio((DistTot+r.getLongueur())/(TempsUtilise+r.getCout()));
+				r.setLongueur(0);
+				TempsUtilise+=r.getCout();
+				DistTot+=r.getLongueur();
+				blop.add(BestRatio(destination, TempsUtilise, DistTot,Tempsmax));
+			}
+		}
+	}
+	return I;
 	}
 }
