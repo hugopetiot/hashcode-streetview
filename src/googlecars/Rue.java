@@ -7,13 +7,14 @@ public class Rue {
 	private int cout;
 	private int longueur;
 	private boolean visite;
+	
 	public boolean isVisite() {
 		return visite;
 	}
 	public void setVisite(boolean visite) {
 		this.visite = visite;
 	}
-	public Rue(boolean ds,Intersection d,Intersection a,int c, int l){
+	public Rue(Intersection d,Intersection a,boolean ds,int c, int l){
 		doublesens=ds;
 		depart=d;
 		arrive=a;

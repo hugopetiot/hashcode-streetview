@@ -24,9 +24,10 @@ public class Main {
 				v.getChemin().add(r.getArrive());
 				depart=r.getArrive();
 				v.setTempsRestant(v.getTempsRestant()-r.getCout());
-				v.setTrajet(v.getTrajet()+r.getLongueur());
+				if(v.getTempsRestant()>0)
+					v.setTrajet(v.getTrajet()+r.getLongueur());
 			}
-			v.getChemin().remove()
+			v.getChemin().remove();
 		}
 			
 			
