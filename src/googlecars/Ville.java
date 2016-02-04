@@ -17,7 +17,13 @@ public class Ville {
 		posInitiale = posi;
 		rues = new ArrayList<Rue>();
 		voitures = new ArrayList<Voiture>();
+<<<<<<< HEAD
 		intersections = new ArrayList<Intersection>();
+=======
+<<<<<<< HEAD
+=======
+		intersections = new Intersection[nbIntersections];
+>>>>>>> origin/master
 		for(int i=0;i<nbVehicules;i++){
 			voitures.add(new Voiture(tempsAutorise));
 		}
@@ -25,6 +31,7 @@ public class Ville {
 	
 	public void ajouterIntersection(double la,double lo){
 		
+>>>>>>> b665d6e45815cc0819414b6f45f64fab6d32bd67
 	}
 	
 	public void ajouterRue(boolean ds,Intersection d,Intersection a,int c, int l){
