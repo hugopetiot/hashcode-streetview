@@ -29,12 +29,7 @@ public class Main {
 			}
 			v.getChemin().remove();
 		}
-			
-			
-			
-			
-			
-		}
+		
 	}
 		
 	
@@ -59,8 +54,7 @@ public class Main {
 				ville.ajouterIntersection(in.nextDouble(), in.nextDouble());
 
 			for(i=0; i<nbr; i++ ){
-				if()
-				ville.ajouterRue(bs, in.nextInt(), in.nextInt(), in.nextInt(), in.nextInt());
+				ville.ajouterRue(in.nextInt(), in.nextInt(), in.nextInt(), in.nextInt(), in.nextInt());
 			}
 
 
