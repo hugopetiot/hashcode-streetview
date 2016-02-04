@@ -41,7 +41,6 @@ public class Main {
 			in = new Scanner(fis);
 			//32300020 //3intersections,2rues,3000s,2vehicules,partantde0.
 			int nbi, nbr, tpsa, nbv, posi;
-			boolean bs;
 			nbi=in.nextInt();
 			nbr=in.nextInt();
 			tpsa=in.nextInt();
