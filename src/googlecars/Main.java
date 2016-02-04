@@ -9,7 +9,11 @@ public class Main {
 	
 	
 	public static void main(String args[]){
-		Ville v = loadData(new File("paris_54000.txt"));
+
+		Ville ville = loadData(new File("paris_54000.txt"));
+		for(Voiture v: ville.getVoitures() ){
+			
+		}
 	}
 	
 	public static Ville loadData(File f){
