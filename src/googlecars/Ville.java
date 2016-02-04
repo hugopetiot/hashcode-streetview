@@ -28,7 +28,13 @@ public class Ville {
 	}
 	
 	public void ajouterRue(int depart,int arrivee, int ds, int c, int l){
-		rues.add(new Rue(intersections.get(depart), intersections.get(arrivee), ds, c, l));
+		Rue r = new Rue(intersections.get(depart), intersections.get(arrivee), ds, c, l);
+		rues.add(r);
+		
+		intersections.get(depart).rues.add(r);
+		if(ds == 2){
+			intersections.get(arrivee).rues.add(r);
+		}
 	}
 
 	public int score(){
