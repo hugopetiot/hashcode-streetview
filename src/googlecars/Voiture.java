@@ -7,9 +7,7 @@ public class Voiture {
 	private int tempsRestant;
 	
 	public void addIntersection(Intersection i){
-		this.chemin.add(i);
-		this.tempsRestant -=
-		
+		this.chemin.add(i);		
 	}
 	
 	public Voiture(int temps){

@@ -9,11 +9,11 @@ public class Main {
 	
 	
 	public static void main(String args[]){
-		Datacenter d = loadData(new File("paris_54000.txt"));
-		System.out.println(d.toString());
-		d.rangement1();
-		System.out.println(d.score());
-		d.etat();
+		Ville ville = loadData(new File("paris_54000.txt"));
+		for(Voiture v: ville.getVoitures() ){
+			
+		}
+		
 	}
 	
 	public static Ville loadData(File f){
