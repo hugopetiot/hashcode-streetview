@@ -11,10 +11,26 @@ public class Main {
 	public static void main(String args[]){
 
 		Ville ville = loadData(new File("paris_54000.txt"));
+		Intersection depart=ville.getIntersections().get(0);
 		for(Voiture v: ville.getVoitures() ){
+			Rue r=null;
+			while(v.getTempsRestant()>0){
+				try{
+				r= depart.meilleure_rue();
+				}
+			catch(ProblemeMeilleureRueException e)
+			{System.out.println("Wesh ca marche pas");
+			return;}
+			}
+		}
+			
+			
+			
+			
 			
 		}
 	}
+		
 	
 	public static Ville loadData(File f){
 		Ville ville = null;
