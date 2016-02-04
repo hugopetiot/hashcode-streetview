@@ -6,6 +6,7 @@ public class Ville {
 	private int nbIntersections, nbRues, tempsAutorise, nbVehicules, posInitiale;
 	private ArrayList<Rue> rues;
 	private ArrayList<Voiture> voitures;
+	private Intersection[] intersections;
 	
 	
 	public Ville (int nbi, int nbr, int tpsa, int nbv, int posi){
@@ -15,7 +16,15 @@ public class Ville {
 		nbVehicules = nbv;
 		posInitiale = posi;
 		rues = new ArrayList<Rue>();
-		voitures = new ArrayList<Voitures>();
+		voitures = new ArrayList<Voiture>();
+		intersections = new Intersection[nbIntersections];
+		for(int i=0;i<nbVehicules;i++){
+			voitures.add(new Voiture(tempsAutorise));
+		}
+	}
+	
+	public void ajouterRue(){
+		
 	}
 	
 
