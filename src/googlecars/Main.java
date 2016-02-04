@@ -29,7 +29,7 @@ public class Main {
 			}
 			v.getChemin().remove();
 		}
-		
+		System.out.println(ville.score());
 	}
 		
 	

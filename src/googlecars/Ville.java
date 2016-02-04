@@ -31,6 +31,18 @@ public class Ville {
 		rues.add(new Rue(intersections.get(depart), intersections.get(arrivee), ds, c, l));
 	}
 
+	public int score(){
+		int s = 0;
+		for(Voiture v : voitures){
+			s += v.getTrajet();
+		}
+		return s;
+	}
+	
+	
+	
+	
+	//Getters et setters
 	public int getNbIntersections() {
 		return nbIntersections;
 	}
