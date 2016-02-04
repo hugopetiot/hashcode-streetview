@@ -24,11 +24,11 @@ public class Ville {
 	}
 	
 	public void ajouterIntersection(double la,double lo){
-		
+		intersections.add(new Intersection(la, lo));
 	}
 	
-	public void ajouterRue(boolean ds,Intersection d,Intersection a,int c, int l){
-		
+	public void ajouterRue(boolean ds,int depart,int arrivee,int c, int l){
+		rues.add(new Rue(ds, intersections.get(depart), intersections.get(arrivee), c, l));
 	}
 
 	public int getNbIntersections() {
