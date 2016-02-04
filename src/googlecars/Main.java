@@ -35,7 +35,6 @@ public class Main {
 			
 			
 		}
-	}
 		
 	
 	public static Ville loadData(File f){
@@ -44,7 +43,7 @@ public class Main {
 		try {
 			FileInputStream fis = new FileInputStream(f);
 			in = new Scanner(fis);
-			//32300020 //3intersections,2rues,3000s,2véhicules,partantde0.
+			//32300020 //3intersections,2rues,3000s,2vehicules,partantde0.
 			int nbi, nbr, tpsa, nbv, posi;
 			boolean bs;
 			nbi=in.nextInt();

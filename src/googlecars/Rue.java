@@ -1,7 +1,7 @@
 package googlecars;
 
 public class Rue {
-	private boolean doublesens;
+	private boolean doublesens; // vrai = double sens, faux = sens unique
 	private Intersection depart;
 	private Intersection arrive;
 	private int cout;
