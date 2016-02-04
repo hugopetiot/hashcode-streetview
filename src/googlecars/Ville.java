@@ -15,7 +15,7 @@ public class Ville {
 		nbVehicules = nbv;
 		posInitiale = posi;
 		rues = new ArrayList<Rue>();
-		voitures = new ArrayList<Voitures>();
+		voitures = new ArrayList<Voiture>();
 	}
 	
 

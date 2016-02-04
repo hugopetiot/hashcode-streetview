@@ -4,6 +4,14 @@ import java.util.ArrayList;
 
 public class Intersection {
 	private ArrayList<Rue> rues;
+	private ArrayList<Intersection> precedent;
+	public ArrayList<Intersection> getPrecedent() {
+		return precedent;
+	}
+	public void setPrecedent(ArrayList<Intersection> precedent) {
+		this.precedent = precedent;
+	}
+
 	private double latitude;
 	private double longitude;
 	public Intersection(double la,double lo){
