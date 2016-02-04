@@ -22,7 +22,7 @@ public class Rue {
 		longueur=l;
 		visite=false;
 	}
-	public boolean isDoublesens() {
+	public boolean getDoublesens() {
 		return doublesens;
 	}
 	public void setDoublesens(boolean doublesens) {
