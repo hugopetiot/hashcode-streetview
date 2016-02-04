@@ -24,10 +24,13 @@ public class Main {
 				{System.out.println("Wesh ca marche pas");
 				return;}
 				v.getChemin().add(r.getArrive());
+				r.setVisite(true);
 				depart=r.getArrive();
 				v.setTempsRestant(v.getTempsRestant()-r.getCout());
-				if(v.getTempsRestant()>0)
+				if(v.getTempsRestant()>0){
 					v.setTrajet(v.getTrajet()+r.getLongueur());
+					r.setLongueur(0);
+				}
 			}
 			v.getChemin().remove();
 		}
