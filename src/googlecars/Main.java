@@ -39,9 +39,14 @@ public class Main {
 				catch(ProblemeMeilleureRueException e)
 				{System.out.println("Wesh ca marche pas");
 				return;}
-				v.getChemin().add(r.getArrive());
+				Intersection destination=null;
+				if(depart.equals(r.getArrive()))
+					destination=r.getDepart();
+				else
+					destination=r.getArrive();
+				v.getChemin().add(destination);
 				r.setVisite(true);
-				depart=r.getArrive();
+				depart=destination;
 				v.setTempsRestant(v.getTempsRestant()-r.getCout());
 				if(v.getTempsRestant()>0){
 					v.setTrajet(v.getTrajet()+r.getLongueur());
@@ -49,7 +54,8 @@ public class Main {
 				}
 			}
 			v.getChemin().remove();
-		}*/
+		}
+		*/
 		
 		System.out.println(ville.score());
 	}
