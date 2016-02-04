@@ -18,10 +18,15 @@ public class Main {
 				try{
 				r= depart.meilleure_rue();
 				}
-			catch(ProblemeMeilleureRueException e)
-			{System.out.println("Wesh ca marche pas");
-			return;}
+				catch(ProblemeMeilleureRueException e)
+				{System.out.println("Wesh ca marche pas");
+				return;}
+				v.getChemin().add(r.getArrive());
+				depart=r.getArrive();
+				v.setTempsRestant(v.getTempsRestant()-r.getCout());
+				v.setTrajet(v.getTrajet()+r.getLongueur());
 			}
+			v.getChemin().remove()
 		}
 			
 			
