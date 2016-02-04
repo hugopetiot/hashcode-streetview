@@ -2,7 +2,6 @@ package googlecars;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 import java.util.Scanner;
 

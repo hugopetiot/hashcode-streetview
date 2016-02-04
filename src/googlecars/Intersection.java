@@ -3,21 +3,18 @@ package googlecars;
 import java.util.ArrayList;
 
 public class Intersection {
-	private ArrayList<Rue> rues;
+	public ArrayList<Rue> rues;
 	private ArrayList<Intersection> precedent;
-	public ArrayList<Intersection> getPrecedent() {
-		return precedent;
-	}
-	public void setPrecedent(ArrayList<Intersection> precedent) {
-		this.precedent = precedent;
-	}
-
 	private double latitude;
 	private double longitude;
+	
 	public Intersection(double la,double lo){
 		latitude=la;
 		longitude=lo;
+		rues = new ArrayList<Rue>();
+		precedent = new ArrayList<Intersection>();
 	}
+	
 	public ArrayList<Rue> getRues() {
 		return rues;
 	}
@@ -35,6 +32,12 @@ public class Intersection {
 	}
 	public void setLongitude(double longitude) {
 		this.longitude = longitude;
+	}
+	public ArrayList<Intersection> getPrecedent() {
+		return precedent;
+	}
+	public void setPrecedent(ArrayList<Intersection> precedent) {
+		this.precedent = precedent;
 	}
 	
 	public Rue meilleure_rue()throws ProblemeMeilleureRueException{
