@@ -27,7 +27,7 @@ public class Ville {
 		intersections.add(new Intersection(la, lo));
 	}
 	
-	public void ajouterRue(boolean ds,int depart,int arrivee,int c, int l){
+	public void ajouterRue(int depart,int arrivee, int ds, int c, int l){
 		rues.add(new Rue(intersections.get(depart), intersections.get(arrivee), ds, c, l));
 	}
 

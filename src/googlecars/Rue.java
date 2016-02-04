@@ -1,7 +1,7 @@
 package googlecars;
 
 public class Rue {
-	private boolean doublesens; // vrai = double sens, faux = sens unique
+	private int doublesens;
 	private Intersection depart;
 	private Intersection arrive;
 	private int cout;
@@ -14,7 +14,7 @@ public class Rue {
 	public void setVisite(boolean visite) {
 		this.visite = visite;
 	}
-	public Rue(Intersection d,Intersection a,boolean ds,int c, int l){
+	public Rue(Intersection d,Intersection a,int ds,int c, int l){
 		doublesens=ds;
 		depart=d;
 		arrive=a;
@@ -22,10 +22,10 @@ public class Rue {
 		longueur=l;
 		visite=false;
 	}
-	public boolean getDoublesens() {
+	public int getDoublesens() {
 		return doublesens;
 	}
-	public void setDoublesens(boolean doublesens) {
+	public void setDoublesens(int doublesens) {
 		this.doublesens = doublesens;
 	}
 	public Intersection getDepart() {
